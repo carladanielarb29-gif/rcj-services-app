@@ -23,7 +23,7 @@ export function FooterWithSocialLinks() {
       <div className="mx-auto w-full px-8 py-4">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6" color="white">
-            RCJ SERVICES SAS
+            R.C.J. SERVICES C.A
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
@@ -56,7 +56,7 @@ export function FooterWithSocialLinks() {
             variant="small"
             className="mb-4 text-center font-normal text-white md:mb-0"
           >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">RCJ SERVICES SAS</a>. All
+            &copy; {currentYear} <a href="https://material-tailwind.com/">R.C.J. SERVICES C.A</a>. All
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-white sm:justify-center">

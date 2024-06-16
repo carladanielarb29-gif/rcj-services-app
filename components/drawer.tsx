@@ -5,14 +5,17 @@ import {
     Typography,
     IconButton,
 } from "@material-tailwind/react";
+import WhatsAppButton from "./whatsappButton";
 
 interface DrawerDefaultProps {
     open: boolean,
     closeDrawer: () => void,
-    product: any
+    product: any,
+    number: string,
+    msg: string
 }
 
-export function DrawerDefault({ open, closeDrawer, product }: DrawerDefaultProps) {
+export function DrawerDefault({ open, closeDrawer, product, number, msg }: DrawerDefaultProps) {
 
     return (
         <Drawer open={open} onClose={closeDrawer} overlay={false} className="p-4 border-solid border-gray border-2" size={700}>
@@ -60,11 +63,17 @@ export function DrawerDefault({ open, closeDrawer, product }: DrawerDefaultProps
                 ))}
             </ul>
 
-            <a href={product?.pdf} target="_blank">
-                <Button size="sm" variant="outlined" className="mt-4">
-                    Documentación en PDF
-                </Button>
-            </a>
+            <div className="flex flex-row gap-2 mt-2">
+
+                <a href={product?.pdf} target="_blank">
+                    <Button variant="filled" className="h-full">
+                        Documentación en PDF
+                    </Button>
+                </a>
+
+                <WhatsAppButton number={number} msg={msg}/>
+
+            </div>
         </Drawer>
 
     );

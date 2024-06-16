@@ -38,7 +38,7 @@ export default function RcjCarousel() {
             <img src="/images/t1.jpg" />
             <div className='text-overlay'>
               <div className='flex flex-col gap-4'>
-                <h1 className="text-5xl">¡BIENVENIDO A RCJ SERVICES!</h1>
+                <h1 className="text-5xl">¡BIENVENIDO A R.C.J. SERVICES!</h1>
                 <h1 className="text-2xl">Metrología y calidad para la vida.</h1>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function RcjCarousel() {
             <div className='text-overlay'>
               <div className='flex flex-col gap-4'>
                 <h1 className="text-5xl">CALIBRACIONES</h1>
-                <h1 className="text-2xl">En RCJ Services ofrecemos el mejor servicio de calibración de latinoamérica.</h1>
+                <h1 className="text-2xl">En R.C.J. Services ofrecemos el mejor servicio de calibración de latinoamérica.</h1>
               </div>
             </div>
         </SwiperSlide>
