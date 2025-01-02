@@ -18,7 +18,7 @@ import WhatsAppButton from "./whatsappButton";
    }
 
 
-  export function CardDefault({product}:CardDefaultProps ) {
+  export function CardProducts({product}:CardDefaultProps ) {
     const [open, setOpen] = useState(false);
  
     const openDrawer = () => setOpen(true);

@@ -1,0 +1,8 @@
+export const featureDta = [
+    {
+        title: "¿Quiénes somos?",
+        img: "/images/rcj-laboratory.jpeg",
+        desc: `RCJ SERVICES es una empresa venezolana cuyo campo de actividades se circunscribe a los servicios de: Venta de patrones y sistemas de calibración y/o ensayo, instrumentos de laboratorio y de proceso, Calibración, verificación y ajuste de instrumentos de laboratorio y de proceso, Asesorías técnicas en el desarrollo de procesos de medición. Fundada el 14/12/1999 , como una respuesta a la necesidad creciente de servicios técnicos especializados, que soportasen los procesos de certificación y acreditación iniciados a nivel nacional e internacional en todas las áreas de la actividad productiva bajo las normas ISO 9001 e ISO/IEC 17025.  
+        El Laboratorio Central de Calibraciones (LCC), es una unidad técnica especializada, perteneciente a la firma comercial R.C.J. SERVICES C.A., cuya principal actividad es la de ofrecer y de desarrollar actividades de calibración, cumpliendo con los requisitos de gestión y técnicos establecidos en la norma internacional ISO/IEC 17025:2005 “Requisitos generales para la competencia de los laboratorios de ensayo y de calibración”. El Laboratorio Central de Calibraciones (LCC), es un laboratorio de calibración acreditado bajo la norma internacional ISO/IEC 17025:2005 por la Dirección de Conformidad con Normas de SENCAMER, en las magnitudes Presión, Masa, Temperatura, Dimensional y Volumen-Masa especifica (Densidad).`,
+    },
+]

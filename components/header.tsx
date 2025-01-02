@@ -26,8 +26,8 @@ export function StickyNavbar() {
         color="white"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
+        <a href="/login" className="flex items-center">
+          Inicio de sesión para clientes
         </a>
       </Typography>
       <Typography

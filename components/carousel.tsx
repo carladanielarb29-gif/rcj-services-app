@@ -23,10 +23,7 @@ export default function RcjCarousel() {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
         }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        autoplay={false}
         loop={true}
         spaceBetween={10}
         navigation={true}
@@ -45,8 +42,7 @@ export default function RcjCarousel() {
         </SwiperSlide>
         <SwiperSlide>
           <div className='relative w-full'>
-            <img src="/images/chroma.webp" />
-            <div className='overlay'></div>
+            <img src="/images/Chroma4.jpg" />
           </div>
         </SwiperSlide>
         <SwiperSlide>

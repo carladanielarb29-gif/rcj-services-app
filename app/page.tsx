@@ -1,10 +1,13 @@
 'use client'
 
 
-import { CardDefault } from "@/components/card";
+import { HorizontalCard } from "@/components/cardFeatures";
+import { CardProducts } from "@/components/cardProducts";
 import RcjCarousel from "@/components/carousel";
 import YouTubeEmbed from "@/components/youtubeIframe";
 import { chromasDta } from "@/data/chromas";
+import { featureDta } from "@/data/feature";
+import { Typography } from "@material-tailwind/react";
 
 export default function Home() {
   return (
@@ -15,9 +18,22 @@ export default function Home() {
           <RcjCarousel />
         </div>
 
+
+      <div className="ml-[10%] mr-[10%]">
+        {featureDta.map((item, index) => (
+          <HorizontalCard  key={index} feature={item}/>
+        ))}
+      </div>
+
+
+
+      <Typography style={{fontSize: 32, textAlign: "center"}}>
+        Los más vendidos del mes
+      </Typography>
+
       <div className="flex flex-row justify-center gap-24">
         {chromasDta.map((item, index) => (
-          <CardDefault key={index} product={item} />
+          <CardProducts key={index} product={item} />
         ))}
       </div>
 
