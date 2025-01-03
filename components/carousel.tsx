@@ -14,7 +14,7 @@ import './styles.css';
 import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default function RcjCarousel() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);;
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function RcjCarousel() {
         style={{
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
-        }}
+        } as any }
         autoplay={false}
         loop={true}
         spaceBetween={10}

@@ -24,8 +24,7 @@ export function StickyNavbar() {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-normal"
-      >
+        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <a href="/login" className="flex items-center">
           Inicio de sesión para clientes
         </a>
@@ -34,8 +33,7 @@ export function StickyNavbar() {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-normal"
-      >
+        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <a href="#" className="flex items-center">
           Account
         </a>
@@ -44,8 +42,7 @@ export function StickyNavbar() {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-normal"
-      >
+        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <a href="#" className="flex items-center">
           Blocks
         </a>
@@ -54,8 +51,7 @@ export function StickyNavbar() {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-normal"
-      >
+        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <a href="#" className="flex items-center">
           Docs
         </a>
@@ -65,12 +61,12 @@ export function StickyNavbar() {
 
   return (
 
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-2" style={{ backgroundColor: "rgb(7 89 133)", opacity: 0.8 }}>
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-2" style={{ backgroundColor: "rgb(7 89 133)", opacity: 0.8 }} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
       <div className="flex items-center justify-between text-white">
 
         <div className="flex flex-row gap-2 items-center justify-center">
           <img src="images/logoRCJ.png" width={70} />
-          <Typography className="font-bold">R.C.J. SERVICES C.A </Typography>
+          <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>R.C.J. SERVICES C.A </Typography>
 
         </div>
 
@@ -80,8 +76,7 @@ export function StickyNavbar() {
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
             ripple={false}
-            onClick={() => setOpenNav(!openNav)}
-          >
+            onClick={() => setOpenNav(!openNav)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             {openNav ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,10 +113,10 @@ export function StickyNavbar() {
       <MobileNav open={openNav}>
         {navList}
         <div className="flex items-center gap-x-1">
-          <Button fullWidth variant="text" size="sm" className="">
+          <Button fullWidth variant="text" size="sm" className="" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <span>Log In</span>
           </Button>
-          <Button fullWidth variant="gradient" size="sm" className="">
+          <Button fullWidth variant="gradient" size="sm" className="" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <span>Sign in</span>
           </Button>
         </div>

@@ -25,9 +25,7 @@ export default function Home() {
         ))}
       </div>
 
-
-
-      <Typography style={{fontSize: 32, textAlign: "center"}}>
+      <Typography style={{ fontSize: 32, textAlign: "center" }}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         Los más vendidos del mes
       </Typography>
 

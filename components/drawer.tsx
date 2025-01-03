@@ -18,12 +18,12 @@ interface DrawerDefaultProps {
 export function DrawerDefault({ open, closeDrawer, product, number, msg }: DrawerDefaultProps) {
 
     return (
-        <Drawer open={open} onClose={closeDrawer} overlay={false} className="p-4 border-solid border-gray border-2" size={700}>
+        <Drawer open={open} onClose={closeDrawer} overlay={false} className="p-4 border-solid border-gray border-2" size={700} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="mb-6 flex items-center justify-between">
-                <Typography variant="h5" color="blue-gray">
+                <Typography variant="h5" color="blue-gray" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     {product?.title}
                 </Typography>
-                <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
+                <IconButton variant="text" color="blue-gray" onClick={closeDrawer} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -45,18 +45,18 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
                 <img src={product?.img} width={300} className="m-auto" />
             </div>
 
-            <Typography color="gray" className="mb-8 mt-4 pr-4 font-normal">
+            <Typography color="gray" className="mb-8 mt-4 pr-4 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 {product?.desc}
             </Typography>
 
-            <Typography color="gray" className="mb-4 pr-4 font-bold">
+            <Typography color="gray" className="mb-4 pr-4 font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 Caracteristicas Generales:
             </Typography>
 
             <ul className="list-disc pl-4">
                 {product?.info.map((desc: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
                     <li key={index}>
-                        <Typography color="gray" className="pr-4 font-normal">
+                        <Typography color="gray" className="pr-4 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                             {desc}
                         </Typography>
                     </li>
@@ -66,7 +66,7 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
             <div className="flex flex-row gap-2 mt-2">
 
                 <a href={product?.pdf} target="_blank">
-                    <Button variant="filled" className="h-full">
+                    <Button variant="filled" className="h-full" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                         Documentación en PDF
                     </Button>
                 </a>

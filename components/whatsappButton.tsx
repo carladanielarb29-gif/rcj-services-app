@@ -22,7 +22,7 @@ const WhatsAppButton = ({ number, msg }: WhatsAppButtonProps) => {
     };
 
     return (
-        <Button onClick={openWhatsApp} variant="outlined">
+        <Button onClick={openWhatsApp} variant="outlined" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="flex flex-row gap-2 justify-center items-center">
                 <span className="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                     <svg

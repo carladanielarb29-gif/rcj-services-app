@@ -28,24 +28,24 @@ import WhatsAppButton from "./whatsappButton";
 
     return (
         <>
-            <Card className="mt-6 w-96">
-                <CardHeader color="blue-gray" className="relative h-56 flex">
+            <Card className="mt-6 w-96" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                <CardHeader color="blue-gray" className="relative h-56 flex" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 <img
                     src={product?.img}
                     alt="card-image"
                 />
                 </CardHeader>
-                <CardBody>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <CardBody placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                <Typography variant="h5" color="blue-gray" className="mb-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     {product?.title}
                 </Typography>
-                <Typography>
+                <Typography placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     {product?.descSmal}
                 </Typography>
                 </CardBody>
-                <CardFooter className="pt-0">
+                <CardFooter className="pt-0" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 <div className="flex flex-row gap-2">
-                    <Button onClick={openDrawer}>Obtener más información</Button>
+                    <Button onClick={openDrawer} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Obtener más información</Button>
                     <WhatsAppButton number={phoneNumber} msg={message}/>
                 </div>
                 </CardFooter>

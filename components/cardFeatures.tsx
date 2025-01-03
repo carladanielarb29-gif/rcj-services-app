@@ -21,28 +21,27 @@ feature: Feature,
  
 export function HorizontalCard({feature}:CardDefaultProps ) {
   return (
-    <Card className="w-full flex-row">
+    <Card className="w-full flex-row" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
       <CardHeader
         shadow={false}
         floated={false}
-        className="m-0 w-2/5 shrink-0 rounded-r-none"
-      >
+        className="m-0 w-2/5 shrink-0 rounded-r-none" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <img
           src={feature.img}
           alt="card-image"
           className="h-full w-full object-cover"
         />
       </CardHeader>
-      <CardBody>
-        <Typography variant="h4" color="blue-gray" className="mb-2">
+      <CardBody placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <Typography variant="h4" color="blue-gray" className="mb-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           {feature.title}
         </Typography>
-        <Typography color="gray" className="mb-8 font-normal">
+        <Typography color="gray" className="mb-8 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           {feature.desc}
         </Typography>
         { feature.link && (
                   <a href={feature.link} className="inline-block">
-                  <Button variant="text" className="flex items-center gap-2">
+                  <Button variant="text" className="flex items-center gap-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     Learn More
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
