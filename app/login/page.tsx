@@ -16,7 +16,7 @@ export default function Basic() {
           Sign In
         </Typography>
         <Typography className="mb-16 text-gray-600 font-normal text-[18px]" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-          Enter your email and password to sign in
+          Enter your email and password to sign in now:
         </Typography>
         <form action="#" className="mx-auto max-w-[24rem] text-left">
           <div className="mb-6">
