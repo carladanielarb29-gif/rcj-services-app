@@ -3,7 +3,7 @@
 export default function Chromas() {
   return (
     <>
-    <div>page para los productos chromas</div>
+    <div>página para los eventos y promociones especiales de RCJ services</div>
     </>
   );
 }

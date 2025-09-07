@@ -40,7 +40,6 @@ export function StickyNavbar() {
         <div className="flex flex-row gap-2 items-center justify-center">
           <img src="images/logoRCJ.png" width={50} />
           <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>R.C.J. SERVICES C.A </Typography>
-
         </div>
 
         <div className="flex items-center gap-4">
@@ -95,6 +94,5 @@ export function StickyNavbar() {
         </div>
       </MobileNav>
     </Navbar>
-
   );
 }

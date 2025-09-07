@@ -23,7 +23,7 @@ export function CardProducts({ product }: CardDefaultProps) {
     return (
         <>
             <Card
-                className="mt-6 w-96 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out"
+                className="mt-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out mx-auto"
                 placeholder=""
                 onPointerEnterCapture={() => { }}
                 onPointerLeaveCapture={() => { }}
@@ -57,7 +57,7 @@ export function CardProducts({ product }: CardDefaultProps) {
                     </Typography>
                 </CardBody>
                 <CardFooter
-                    className="pt-0 flex justify-center gap-2"
+                    className="pt-0 flex flex-col sm:flex-row justify-center gap-2"
                     placeholder=""
                     onPointerEnterCapture={() => { }}
                     onPointerLeaveCapture={() => { }}
@@ -68,10 +68,11 @@ export function CardProducts({ product }: CardDefaultProps) {
                         onPointerEnterCapture={() => { }}
                         onPointerLeaveCapture={() => { }}
                     >
-                        Obtener más información
+                        Solicitar una cotización
                     </Button>
                     <WhatsAppButton number={phoneNumber} msg={message} />
                 </CardFooter>
+
             </Card>
 
             <DrawerDefault

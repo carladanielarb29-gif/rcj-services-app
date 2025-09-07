@@ -23,18 +23,18 @@ export function HorizontalCard({ feature }: CardDefaultProps) {
       onPointerLeaveCapture={undefined}
     >
       <CardBody 
-        className="p-8 text-gray-700 space-y-6"
+        className="p-8 text-gray-700 space-y-6 mt-[-20px]"
         placeholder={undefined} 
         onPointerEnterCapture={undefined} 
         onPointerLeaveCapture={undefined}
       >
         <p>
-          <strong>RCJ SERVICES</strong> es una empresa de Servicios Globales de Metrología y Calidad cuyo campo de actividades se circunscribe a seis (6) grandes áreas de servicios de metrología y calidad que abarcan las siguientes áreas especializadas:
+          <strong>RCJ SERVICES</strong> es una empresa de Servicios Globales de Metrología y Calidad cuyo campo de actividades se circunscribe a seis (6) grandes áreas de servicios de metrología y calidad que abarcan las siguientes actividades especializadas:
         </p>
 
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Servicios de calibración</strong> cumpliendo los estándares establecidos en la Norma ISO/IEC 17025:2017.</li>
-          <li><strong>Consultoría</strong> en diseño, desarrollo e implementación de Sistemas de gestión.</li>
+          <li><strong>Consultoría</strong> en diseño, desarrollo e implementación de Sistemas de gestión ISO/IEC 17025:2017.</li>
           <li><strong>Auditorías</strong> de Sistemas de gestión basados en la Norma ISO/IEC 17025:2017.</li>
           <li><strong>Servicios de Aseguramiento</strong> de la validez de los resultados emitidos.</li>
           <li><strong>Formación y capacitación</strong> en áreas de metrología y calidad.</li>

@@ -1,6 +1,5 @@
 'use client'
 
-
 import { HorizontalCard } from "@/components/cardFeatures";
 import { CardProducts } from "@/components/cardProducts";
 import RcjCarousel from "@/components/carousel";
@@ -11,44 +10,59 @@ import { Typography } from "@material-tailwind/react";
 
 export default function Home() {
   return (
-
     <div className="flex flex-col gap-12">
-
-      <div className="h-[600px] w-[80%] m-auto">
+      {/* Hero */}
+      <div className="w-full max-w-6xl mx-auto px-4 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
         <RcjCarousel />
       </div>
 
-
-      <Typography style={{ fontSize: 32, textAlign: "center" }} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+      {/* Sección 1 */}
+      <Typography
+        className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         ¿Quiénes somos?
       </Typography>
 
-      <div className="ml-[10%] mr-[10%]">
+      <div className="px-4 sm:px-10">
         {featureDta.map((item, index) => (
           <HorizontalCard key={index} feature={item} />
         ))}
       </div>
 
-      <Typography style={{ fontSize: 32, textAlign: "center" }} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        Áres de servicios especializados que ofrecemos:
+      {/* Sección productos */}
+      <Typography
+        className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
+        Áreas de servicios especializados que ofrecemos
       </Typography>
 
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4">
         {chromasDta.map((item, index) => (
           <CardProducts key={index} product={item} />
         ))}
       </div>
 
-
-      <Typography style={{ fontSize: 32, textAlign: "center" }} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        Información de Metrología:
+      {/* Videos */}
+      <Typography
+        className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
+        Información de Metrología
       </Typography>
 
-      <div className="w-[900px] m-auto">
+      <div className="w-full max-w-4xl mx-auto px-4">
         <YouTubeEmbed videoId="muweCIH0WmQ" />
       </div>
-      
-      <div className="w-[900px] m-auto">
+
+      <div className="w-full max-w-4xl mx-auto px-4">
         <YouTubeEmbed videoId="1T5MtekacO8" />
       </div>
     </div>

@@ -22,48 +22,49 @@ export default function RcjCarousel() {
         style={{
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
-        } as any }
+        } as any}
         autoplay={false}
         loop={true}
         spaceBetween={10}
         navigation={true}
-        thumbs={{ swiper: thumbsSwiper}}
+        thumbs={{ swiper: thumbsSwiper }}
         modules={[Autoplay, FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
         <SwiperSlide>
-            <img src="/images/t1.jpg" />
-            <div className='text-overlay'>
-              <div className='flex flex-col gap-4'>
-                <h1 className="text-5xl">¡BIENVENIDO A R.C.J. SERVICES!</h1>
-                <h1 className="text-2xl">Metrología y calidad para la vida.</h1>
-              </div>
+          <img src="/images/t1.jpg" />
+          <div className='text-overlay'>
+            <div className='flex flex-col gap-4'>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">¡BIENVENIDO A R.C.J. SERVICES!</h1>
+              <h1 className="text-base sm:text-lg md:text-2xl">Metrología y calidad para la vida.</h1>
             </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full'>
-            <img src="/images/Chroma4.jpg" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-            <img src="/images/i1.jpg" />
-
+          <div className='relative w-full'>
+            <img src="/images/t4.jpg" />
             <div className='text-overlay'>
               <div className='flex flex-col gap-4'>
-                <h1 className="text-5xl">CALIBRACIONES</h1>
-                <h1 className="text-2xl">En R.C.J. Services ofrecemos el mejor servicio de calibración de latinoamérica.</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">EVENTOS</h1>
+                <h1 className="text-base sm:text-lg md:text-2xl">Conoce nuestros eventos y promociones especiales haciendo click <a href="/eventos" style={{ textDecoration: "underline" }}>aquí</a></h1>
               </div>
             </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-            <img src="/images/laboratorio1.jpg" />
-            <h1 className="text-overlay text-5xl">CAPACITACIONES Y ASESORÍAS</h1>
+          <img src="/images/i1.jpg" />
+          <div className='text-overlay'>
+            <div className='flex flex-col gap-4'>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">CALIBRACIONES</h1>
+              <h1 className="text-base sm:text-lg md:text-2xl">En R.C.J. Services ofrecemos servicios de calibración de alta calidad.</h1>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-            <img src="/images/t4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/images/t2.jpg" />
+          <img src="/images/laboratorio1.jpg" />
+          <div className='text-overlay'>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">CAPACITACIONES Y ASESORÍAS</h1>
+          </div>
         </SwiperSlide>
       </Swiper>
       <Swiper
@@ -77,26 +78,33 @@ export default function RcjCarousel() {
       >
         <SwiperSlide>
           <img src="/images/t1.jpg" />
-          <h1 className='text-overlay'>¿QUIÉNES SOMOS?</h1>
+          <h1 className="text-overlay text-xs sm:text-sm lg:text-xl text-white drop-shadow-md">
+            ¿QUIÉNES SOMOS?
+          </h1>
+
         </SwiperSlide>
+
         <SwiperSlide>
-          <img src="/images/chroma.webp" />
-          <h1 className='text-overlay'>PRODUCTOS CHROMA</h1>
+          <img src="/images/t4.jpg" />
+          <h1 className="text-overlay text-xs sm:text-sm lg:text-xl text-white drop-shadow-md">
+            EVENTOS
+          </h1>
         </SwiperSlide>
+
         <SwiperSlide>
           <img src="/images/i1.jpg" />
-          <h1 className='text-overlay'>CALIBRACIONES</h1>
+          <h1 className="text-overlay text-xs sm:text-sm lg:text-xl text-white drop-shadow-md">
+            CALIBRACIONES
+          </h1>
         </SwiperSlide>
+
         <SwiperSlide>
           <img src="/images/laboratorio1.jpg" />
-          <h1 className='text-overlay'>ASESORÍAS</h1>
+          <h1 className="text-overlay text-xs sm:text-sm lg:text-xl text-white drop-shadow-md">
+            ASESORÍAS
+          </h1>
         </SwiperSlide>
-        <SwiperSlide>
-        <img src="/images/t4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src="/images/t2.jpg" />
-        </SwiperSlide>
+
       </Swiper>
     </>
   );
