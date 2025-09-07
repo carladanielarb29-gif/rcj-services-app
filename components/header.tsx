@@ -26,34 +26,7 @@ export function StickyNavbar() {
         color="white"
         className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <a href="/login" className="flex items-center">
-          Inicio de sesión para clientes
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
-        <a href="#" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
-        <a href="#" className="flex items-center">
-          Docs
+          Portal de clientes
         </a>
       </Typography>
     </ul>
@@ -65,7 +38,7 @@ export function StickyNavbar() {
       <div className="flex items-center justify-between text-white">
 
         <div className="flex flex-row gap-2 items-center justify-center">
-          <img src="images/logoRCJ.png" width={70} />
+          <img src="images/logoRCJ.png" width={50} />
           <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>R.C.J. SERVICES C.A </Typography>
 
         </div>

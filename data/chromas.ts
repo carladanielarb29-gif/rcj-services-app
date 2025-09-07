@@ -1,27 +1,31 @@
-export const chromasDta = [
-    {
-        title: "Multímetros digitales (Chroma 12061)",
-        img: "/images/test.png",
-        descSmal: "El multímetro digital 12061 dispone de una resolución 6 ½ dígitos (2.000.000 cuentas del display) y tiene una gran variedad de configuraciones para la resolución, el tiempo de integración y los rangos permiten a los usuarios optimizar la configuración de la velocidad de medición, la resolución y la exactitud cuando se encuentran en modos de prueba de medición individuales.",
-        desc: "El multímetro digital 12061 dispone de una resolución 6 ½ dígitos (2.000.000 cuentas del display) y tiene una gran variedad de configuraciones para la resolución, el tiempo de integración y los rangos permiten a los usuarios optimizar la configuración de la velocidad de medición, la resolución y la exactitud cuando se encuentran en modos de prueba de medición individuales. El 12061 tiene incorporado un convertidor A/D de alta velocidad y baja interferencia con una velocidad máxima de 2000 Lecturas/s, lo que lo convierte en la mejor solución para la medición de alta velocidad.",
-        info: [ "Resolución de 61/2 dígitos", "11 tipos de características de medición: Voltaje/corriente de CC (1000 V/3 A máx.), Voltaje/corriente de CA (750 V/3 A máx.), Medición de resistencia de 2 o 4 ohmios de hilo, Periodo y frecuencia, Diodo y continuidad, Temperatura (termopar y RTD).", "Varias funciones matemáticas: NULO, Máx./Mín./Promedio, Límite alto/bajo, Porcentaje/Ratio/ MX+B, dB/dBm", "Precisión de voltaje de CC: 0.0015%", "Precisión de voltaje de CA: 0.04%", "Tarjeta de escáner TC multipunto opcional (10 canales), tarjeta de escáner multipunto (10/20 canales)",  "Medición y transmisión de datos de hasta 2000 lecturas/seg (41/2)"],
-        pdf: "https://www.chromausa.com/pdf/Br-12061-DMM-052013.pdf"
-    },
-    {
-        title: "Medidores de miliohmios (Chroma 16502)",
-        img: "/images/test2.png",
-        descSmal: "Solución perfecta para medir la medición de baja resistencia o las características conductoras de dispositivos como interruptores, conectores de relés y placas de circuito impreso. Con una exactitud básica del 0,05%, Chroma 16502 ofrece un amplio rango de medición de 0,001 mΩ ~ 1,9999 MΩ. Proporciona un rango de medición con una resolución de 4 1/2 dígitos.",
-        desc: "Solución perfecta para medir la medición de baja resistencia o las características conductoras de dispositivos como interruptores, conectores de relés y placas de circuito impreso. Con una exactitud básica del 0,05%, Chroma 16502 ofrece un amplio rango de medición de 0,001 mΩ ~ 1,9999 MΩ. Proporciona un rango de medición con una resolución de 4 1/2 dígitos. El tiempo de medición rápido es de 65 ms. Se adapta a la evaluación de componentes en la línea de producción. El modo de salida de corriente de prueba pulsada se utiliza para reducir la afección de los campos electromagnéticos térmicos en la medición de miliohmios. El modo de salida de corriente de prueba de CC se utiliza para acelerar la velocidad de medición para DUT inductivo. El modo de salida de corriente de prueba de circuito seco se utiliza para medir dichas resistencias de contacto donde el voltaje máximo de circuito abierto debe limitarse a 20 mV.",
-        info: [ "Precisión básica: 0.05%", "El modo de salida de corriente de prueba pulsada se utiliza para reducir la afección de los campos electromagnéticos térmicos en la medición de miliohmios",  "El modo de salida de corriente de prueba de CC se utiliza para acelerar la velocidad de medición para DUT inductivo", "El modo de salida de corriente de prueba de circuito seco (limitado a un máximo de 20 mV) se utiliza para medir dichas resistencias de contacto en las que la tensión máxima de circuito abierto debe limitarse a 50 mV", "Corrección de temperatura (función TC) independientemente del material o la temperatura ■ Función útil de conversión de temperatura para la evaluación del motor/bobina"],
-        pdf: "https://www.chromausa.com/pdf/16502%20Milliohm%20Meter%20052023.pdf"
-    },
-    {
-        title: "Multímetros digitales (Chroma 12061)",
-        img: "/images/test.png",
-        descSmal: "El multímetro digital 12061 dispone de una resolución 6 ½ dígitos (2.000.000 cuentas del display) y tiene una gran variedad de configuraciones para la resolución, el tiempo de integración y los rangos permiten a los usuarios optimizar la configuración de la velocidad de medición, la resolución y la exactitud cuando se encuentran en modos de prueba de medición individuales.",
-        desc: "El multímetro digital 12061 dispone de una resolución 6 ½ dígitos (2.000.000 cuentas del display) y tiene una gran variedad de configuraciones para la resolución, el tiempo de integración y los rangos permiten a los usuarios optimizar la configuración de la velocidad de medición, la resolución y la exactitud cuando se encuentran en modos de prueba de medición individuales. El 12061 tiene incorporado un convertidor A/D de alta velocidad y baja interferencia con una velocidad máxima de 2000 Lecturas/s, lo que lo convierte en la mejor solución para la medición de alta velocidad.",
-        info: [ "Resolución de 61/2 dígitos", "11 tipos de características de medición: Voltaje/corriente de CC (1000 V/3 A máx.), Voltaje/corriente de CA (750 V/3 A máx.), Medición de resistencia de 2 o 4 ohmios de hilo, Periodo y frecuencia, Diodo y continuidad, Temperatura (termopar y RTD).", "Varias funciones matemáticas: NULO, Máx./Mín./Promedio, Límite alto/bajo, Porcentaje/Ratio/ MX+B, dB/dBm", "Precisión de voltaje de CC: 0.0015%", "Precisión de voltaje de CA: 0.04%", "Tarjeta de escáner TC multipunto opcional (10 canales), tarjeta de escáner multipunto (10/20 canales)",  "Medición y transmisión de datos de hasta 2000 lecturas/seg (41/2)"],
-        pdf: "https://www.chromausa.com/pdf/Br-12061-DMM-052013.pdf"
-    },
+export const chromasDta = [ 
+  { 
+    title: "Servicios de consultorías ISO/IEC17025:2017", 
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" 
+  },
 
-]
+  { 
+    title: "Servicios de calibración con competencia ISO/IEC17025:2017", 
+    image: "https://iveconsultores.com/wp-content/uploads/2019/02/imagen-manometros.jpg" // laboratorio / calibración
+  },
+
+  { 
+    title: "Servicios de Auditorías de SG ISO/IEC17025:2017", 
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" 
+  },
+
+  { 
+    title: "Servicios de Aseguramiento a la validez de los resultados", 
+    image: "https://lamenteesmaravillosa.com/wp-content/uploads/2021/10/hombre-haciendo-estadistica.png" // sello calidad
+  },
+
+  { 
+    title: "Desarrollo y validación de software ISO/IEC17025:2017", 
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" 
+  },
+
+  { 
+    title: "Servicios de formación en metrología y calidad ISO/IEC17025:2017", 
+    image: "https://www.tcmetrologia.com/content/uploads/2019/05/Calibraci%C3%B3n-y-verificaci%C3%B3n-de-equipos-Nivel-II.jpg" // formación
+  },
+];

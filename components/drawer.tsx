@@ -54,13 +54,7 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
             </Typography>
 
             <ul className="list-disc pl-4">
-                {product?.info.map((desc: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
-                    <li key={index}>
-                        <Typography color="gray" className="pr-4 font-normal" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                            {desc}
-                        </Typography>
-                    </li>
-                ))}
+
             </ul>
 
             <div className="flex flex-row gap-2 mt-2">
