@@ -48,7 +48,7 @@ export function CardProducts({ product }: CardDefaultProps) {
                 >
                     <Typography
                         variant="h5"
-                        className="mb-2 text-center text-blue-900 font-semibold"
+                        className="mb-2 text-center text-[#337599] font-semibold"
                         placeholder=""
                         onPointerEnterCapture={() => { }}
                         onPointerLeaveCapture={() => { }}
