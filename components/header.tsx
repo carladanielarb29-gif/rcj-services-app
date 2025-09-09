@@ -17,9 +17,8 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
         onClick={() => handleScroll("quienes")}
         variant="outlined"
         size="sm"
-        className="normal-case text-white border-white rounded-md px-4 py-2 
-                  hover:bg-white hover:text-[#113c61]"
-      >
+        className="normal-case text-white border-white rounded-md px-4 py-2 hover:bg-white hover:text-[#113c61]"
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         ¿Quiénes somos?
       </Button>
     </li>
@@ -28,9 +27,8 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
         onClick={() => handleScroll("servicios")}
         variant="outlined"
         size="sm"
-        className="normal-case text-white border-white rounded-md px-4 py-2 
-                  hover:bg-white hover:text-[#113c61]"
-      >
+        className="normal-case text-white border-white rounded-md px-4 py-2 hover:bg-white hover:text-[#113c61]"
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         Servicios
       </Button>
     </li>
@@ -39,9 +37,8 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
         onClick={() => handleScroll("info")}
         variant="outlined"
         size="sm"
-        className="normal-case text-white border-white rounded-md px-4 py-2 
-                  hover:bg-white hover:text-[#113c61]"
-      >
+        className="normal-case text-white border-white rounded-md px-4 py-2 hover:bg-white hover:text-[#113c61]"
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         Información metrológica
       </Button>
     </li>
@@ -49,9 +46,8 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
 
       <Button
         size="sm"
-        className="normal-case bg-white text-[#003366] rounded-md px-4 py-2 
-                    hover:bg-[#113c61] hover:text-white hover:border-[#113c61] shadow-md"
-      >
+        className="normal-case bg-white text-[#003366] rounded-md px-4 py-2 hover:bg-[#113c61] hover:text-white hover:border-[#113c61] shadow-md"
+        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         Portal para clientes
       </Button>
 
@@ -94,12 +90,13 @@ export function StickyNavbar() {
       <div className="mx-2 lg:mx-2">
         <Navbar
           className="w-full max-w-none rounded-lg py-2 shadow-lg"
+          placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           style={{ backgroundColor: "#337599", opacity: 0.95 }}
           role="navigation"
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between text-white px-2 lg:px-4">
-            {/* Logo + nombre */}
+            
             <div className="flex flex-row gap-2 items-center">
               <Image
                 src="/images/logoRCJ.png"
@@ -108,12 +105,12 @@ export function StickyNavbar() {
                 alt="Logo"
                 priority
               />
-              <Typography className="font-bold" aria-label="Nombre empresa">
+              <Typography className="font-bold"placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} aria-label="Nombre empresa">
                 R.C.J. SERVICES C.A
               </Typography>
             </div>
 
-            {/* Navegación */}
+            
             <div className="flex items-center gap-4">
               <div className="hidden lg:block">
                 <NavList handleScroll={handleScroll} />
@@ -121,6 +118,7 @@ export function StickyNavbar() {
               <IconButton
                 variant="text"
                 className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
                 ripple={false}
                 onClick={() => setOpenNav(!openNav)}
                 aria-label={openNav ? "Cerrar menú" : "Abrir menú"}
@@ -159,7 +157,7 @@ export function StickyNavbar() {
             </div>
           </div>
 
-          {/* Menú en mobile */}
+        
           <MobileNav open={openNav}>
             <NavList handleScroll={handleScroll} />
           </MobileNav>

@@ -65,13 +65,13 @@ export function HorizontalCard({ feature }: CardDefaultProps) {
         </p>
 
         <div className="w-full flex justify-center">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {servicios.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center justify-center text-center rounded-full 
-                        w-32 h-32 md:w-48 md:h-48 p-4 bg-white overflow-hidden
-                        shadow-xl shadow-gray-300"
+                   w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 p-4 bg-white overflow-hidden
+                   shadow-xl shadow-gray-300"
                 style={{ border: `8px solid ${item.color}` }}
               >
                 <h3
