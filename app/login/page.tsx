@@ -102,7 +102,8 @@ export default function Basic() {
         </form>
       </div>
       <div className="w-1/2">
-        <img src="/images/laboratorio1.jpg" />
+        <img src="/images/laboratorio1.jpg" 
+        alt="Imagen de laboratorio de calibraciones 1"/>
       </div>
     </section>
   );
