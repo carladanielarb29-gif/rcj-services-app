@@ -35,7 +35,12 @@ export default function RcjCarousel() {
           <img src="/images/t1.jpg" />
           <div className='text-overlay'>
             <div className='flex flex-col gap-4'>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">¡BIENVENIDO A R.C.J. SERVICES!</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                ¡BIENVENIDO A
+              </h1>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-md">
+                R.C.J. SERVICES!
+              </h2>
               <h1 className="text-base sm:text-lg md:text-2xl">Metrología y calidad para la vida.</h1>
             </div>
           </div>

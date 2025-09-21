@@ -17,7 +17,8 @@ export default function Home() {
       </div>
 
       {/* Sección 1 */}
-      <Typography
+      <Typography 
+        id="quienes"
         className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
@@ -25,6 +26,7 @@ export default function Home() {
       >
         ¿Quiénes somos?
       </Typography>
+      
 
       <div className="px-4 sm:px-10">
         {featureDta.map((item, index) => (
@@ -34,6 +36,7 @@ export default function Home() {
 
       {/* Sección productos */}
       <Typography
+        id="servicios"
         className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
@@ -50,6 +53,7 @@ export default function Home() {
 
       {/* Videos */}
       <Typography
+        id="info"
         className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
