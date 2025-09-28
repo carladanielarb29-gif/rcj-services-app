@@ -9,8 +9,18 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+} from '@clerk/nextjs'
 
+import { usePathname } from "next/navigation"; // 👈 para saber la ruta actual
+import Link from "next/link";
+
+// dentro de tu componente StickyNavbar:
 const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScroll }) => (
+
   <ul className="mt-2 mb-4 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4">
     <li>
       <Button
@@ -44,13 +54,28 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
     </li>
     <li>
 
-      <Button
-        size="sm"
-        className="normal-case bg-white text-[#003366] rounded-md px-4 py-2 hover:bg-[#113c61] hover:text-white hover:border-[#113c61] shadow-md"
-        placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        Portal para clientes
-      </Button>
+      <SignedOut>
+        <SignInButton mode="modal" fallbackRedirectUrl="/client">
+          <Button
+            size="sm"
+            className="normal-case bg-white text-[#003366] rounded-md px-4 py-2 hover:bg-[#113c61] hover:text-white hover:border-[#113c61] shadow-md"
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            Portal para clientes
+          </Button>
+        </SignInButton>
+      </SignedOut>
 
+      <SignedIn>
+        <Link href="/client">
+          <Button
+            size="sm"
+            className="normal-case bg-white text-[#003366] rounded-md px-4 py-2 hover:bg-[#113c61] hover:text-white hover:border-[#113c61] shadow-md"
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
+          >
+            Ir al portal
+          </Button>
+        </Link>
+      </SignedIn>
     </li>
   </ul>
 );
@@ -58,6 +83,8 @@ const NavList: React.FC<{ handleScroll: (id: string) => void }> = ({ handleScrol
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
 
+  const pathname = usePathname();
+  const isClientPage = pathname.includes("/client");
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
@@ -86,8 +113,8 @@ export function StickyNavbar() {
   }, []);
 
   return (
-    <div className="sticky top-1 z-50">
-      <div className="mx-2 lg:mx-2">
+    <div className="sticky top-0 z-50">
+      <div>
         <Navbar
           className="w-full max-w-none rounded-lg py-2 shadow-lg"
           placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
@@ -96,24 +123,27 @@ export function StickyNavbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between text-white px-2 lg:px-4">
-            
-            <div className="flex flex-row gap-2 items-center">
-              <Image
-                src="/images/logoRCJ.png"
-                width={45}
-                height={45}
-                alt="Logo"
-                priority
-              />
-              <Typography className="font-bold"placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} aria-label="Nombre empresa">
-                R.C.J. SERVICES C.A
-              </Typography>
-            </div>
 
-            
+            <Link href="/" aria-label="Inicio">
+              <div className="flex flex-row gap-2 items-center">
+                <Image
+                  src="/images/logoRCJ.png"
+                  width={45}
+                  height={45}
+                  alt="Logo"
+                  priority
+                />
+                <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} aria-label="Nombre empresa">
+                  R.C.J. SERVICES C.A
+                </Typography>
+              </div>
+            </Link>
+
             <div className="flex items-center gap-4">
               <div className="hidden lg:block">
-                <NavList handleScroll={handleScroll} />
+                {!isClientPage &&
+                  <NavList handleScroll={handleScroll} />
+                }
               </div>
               <IconButton
                 variant="text"
@@ -157,7 +187,7 @@ export function StickyNavbar() {
             </div>
           </div>
 
-        
+
           <MobileNav open={openNav}>
             <NavList handleScroll={handleScroll} />
           </MobileNav>

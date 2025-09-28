@@ -6,7 +6,7 @@ export const chromasDta = [
 
   { 
     title: "Servicios de calibración con competencia ISO/IEC17025:2017", 
-    image: "https://iveconsultores.com/wp-content/uploads/2019/02/imagen-manometros.jpg" // laboratorio / calibración
+    image: "https://procemconsultores.com/wp-content/uploads/2022/05/Artes-del-Website-1-1024x493.png" // laboratorio / calibración
   },
 
   { 

@@ -6,6 +6,7 @@ import {
     IconButton,
     Input,
     Textarea,
+    Spinner,
 } from "@material-tailwind/react";
 import { DialogDefault } from "./modal";
 
@@ -14,15 +15,16 @@ interface DrawerDefaultProps {
     closeDrawer: () => void,
     product: any,
     number: string,
-    msg: string
+    msg: string,
+    isReclamo?: boolean; // Nueva prop para diferenciar entre Queja y cotización
 }
 
-export function DrawerDefault({ open, closeDrawer, product, number, msg }: DrawerDefaultProps) {
+export function DrawerDefault({ open, closeDrawer, product, number, msg, isReclamo }: DrawerDefaultProps) {
 
     const [openModal, setOpenModal] = React.useState(false);
+    const [loading, setLoading] = React.useState(false);
 
     const handleOpenModal = () => setOpenModal(!openModal);
-
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -39,22 +41,43 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
         };
 
         try {
-            const res = await fetch("/api/send", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
+            setLoading(true);
+            if (isReclamo) {
+                const res = await fetch("/api/send-reclamos", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
 
-            if (res.ok) {
-                console.log("Correo enviado ✅");
-                setOpenModal(true);
+                if (res.ok) {
+                    console.log("Correo enviado ✅");
+                    setOpenModal(true);
+                } else {
+                    console.error("Error al enviar correo ❌");
+                    alert("Hubo un error al enviar tu solicitud, inténtalo de nuevo.");
+                }
             } else {
-                console.error("Error al enviar correo ❌");
-                alert("Hubo un error al enviar tu solicitud, inténtalo de nuevo.");
+                const res = await fetch("/api/send", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+
+
+                if (res.ok) {
+                    console.log("Correo enviado ✅");
+                    setOpenModal(true);
+                } else {
+                    console.error("Error al enviar correo ❌");
+                    alert("Hubo un error al enviar tu solicitud, inténtalo de nuevo.");
+                }
             }
+
         } catch (error) {
             console.error(error);
             alert("Error de conexión con el servidor.");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -68,8 +91,7 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
                 className="p-4 border-solid border-gray border-2 max-w-full sm:max-w-lg"
                 size={700}
                 placeholder=""
-                onPointerEnterCapture={() => { }}
-                onPointerLeaveCapture={() => { }}
+                {...({} as any)}
             >
                 {/* Header */}
                 <div className="mb-6 flex items-center justify-between">
@@ -77,18 +99,16 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
                         variant="h5"
                         color="blue-gray"
                         placeholder=""
-                        onPointerEnterCapture={() => { }}
-                        onPointerLeaveCapture={() => { }}
+                        {...({} as any)}
                     >
-                        Solicitar cotización para: {product?.title}
+                        {!isReclamo && "Solicitar cotización para:"} {product?.title}
                     </Typography>
                     <IconButton
                         variant="text"
                         color="blue-gray"
                         onClick={closeDrawer}
                         placeholder=""
-                        onPointerEnterCapture={() => { }}
-                        onPointerLeaveCapture={() => { }}
+                        {...({} as any)}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +122,6 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
                         </svg>
                     </IconButton>
                 </div>
-
-                {/* Imagen */}
 
                 {/* Formulario */}
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -134,16 +152,26 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg }: Drawe
                         required onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} />
                     <Textarea
                         name="message"
-                        label="Descripción general de la solicitud"
+                        label={!isReclamo ? "Descripción general de la solicitud" : "Descripción de la Queja"}
                         required onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
-                    <Button type="submit" variant="filled" color="blue" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                        Enviar
+                    <Button
+                        disabled={loading}
+                        type="submit" variant="filled" color="blue" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
+                        className="flex items-center justify-center gap-2"
+                    >
+                        {loading ? (
+                            <>
+                                <Spinner className="h-4 w-4" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> Procesando...
+                            </>
+                        ) : (
+                            "Enviar"
+                        )}
                     </Button>
                 </form>
 
             </Drawer>
 
-            <DialogDefault open={openModal} handler={handleOpenModal} />
+            <DialogDefault open={openModal} handler={handleOpenModal} isReclamo={isReclamo} />
 
         </>
 
