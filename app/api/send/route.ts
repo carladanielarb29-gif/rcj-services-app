@@ -8,7 +8,7 @@ export async function POST(req: Request) {
         console.log("Sending email with body:", body);
         const { data, error } = await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'lccrcjservices@gmail.com',
+            to: 'info@rcj-services.com',
             subject: 'Solicitud de cotización',
             html: `<div style={{ fontFamily: "Arial, sans-serif", color: "#333" }}>
       <h2 style={{ color: "#2563eb" }}>📌 Nueva solicitud de cotización</h2>
