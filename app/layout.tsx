@@ -23,9 +23,9 @@ export default function RootLayout({
     <ClerkProvider localization={esES}>
       <html lang="es">
         <body className={inter.className}>
-          <div className="">
+          <div className="flex min-h-screen flex-col">
             <StickyNavbar />
-            <div className="m-8">
+            <div className="m-8 flex-1">
               {children}
             </div>
             <FooterWithSocialLinks />

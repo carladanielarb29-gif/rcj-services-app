@@ -26,8 +26,8 @@ export function CardProducts({ product, action }: CardDefaultProps) {
     const handleCardClick = () => {
         if (action === "reclamos") {
             openDrawer();
-        } else if (action === "status" || action === "cert-cal") {
-           // router.push(`/client/${action}`);
+        } else if (action === "status" || action === "calibration-certs") {
+            router.push(`/client/${action}`);
         }
     };
 
