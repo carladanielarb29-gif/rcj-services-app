@@ -133,9 +133,14 @@ export function StickyNavbar() {
                   alt="Logo"
                   priority
                 />
-                <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} aria-label="Nombre empresa">
-                  R.C.J. SERVICES C.A
-                </Typography>
+                <div className="flex flex-col">
+                  <Typography className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} aria-label="Nombre empresa">
+                    R.C.J. SERVICES C.A
+                  </Typography>
+                  <Typography className="text-xs opacity-80" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                    Rif: J306772936
+                  </Typography>
+                </div>
               </div>
             </Link>
 

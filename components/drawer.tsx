@@ -88,7 +88,7 @@ export function DrawerDefault({ open, closeDrawer, product, number, msg, isRecla
                 open={open}
                 onClose={closeDrawer}
                 overlay={false}
-                className="p-4 border-solid border-gray border-2 max-w-full sm:max-w-lg"
+                className={`p-4 border-solid border-gray border-2 max-w-full sm:max-w-lg ${open ? "" : "shadow-none"}`}
                 size={700}
                 placeholder=""
                 {...({} as any)}

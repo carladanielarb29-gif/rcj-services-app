@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-12">
       {/* Hero */}
-      <div className="w-full max-w-6xl mx-auto px-4 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 aspect-[4/3] sm:aspect-video lg:aspect-[21/9]">
         <RcjCarousel />
       </div>
 

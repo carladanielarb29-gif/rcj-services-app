@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "procemconsultores.com" },
+      { protocol: "https", hostname: "lamenteesmaravillosa.com" },
+      { protocol: "https", hostname: "www.tcmetrologia.com" },
+    ],
+  },
   async headers() {
     return [
       {

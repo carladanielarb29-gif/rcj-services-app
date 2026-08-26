@@ -61,7 +61,7 @@ export function HorizontalCard({ feature }: CardDefaultProps) {
         onPointerLeaveCapture={undefined}
       >
         <p>
-          <strong>RCJ SERVICES</strong> es una empresa de Servicios Globales de Metrología y Calidad cuyo campo de actividades se circunscribe a seis (6) grandes áreas de servicios de metrología y calidad que abarcan las siguientes actividades especializadas:
+          <strong>RCJ SERVICES</strong> es una empresa de Servicios Globales de Metrología y Calidad cuyo campo de actividades se circunscribe a seis (6) grandes áreas de servicios de metrología y calidad que abarcan las siguientes actividades especializadas.
         </p>
 
         <div className="w-full flex justify-center">

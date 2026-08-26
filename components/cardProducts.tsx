@@ -1,6 +1,7 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation"; // 👈 para navegar programáticamente
+import Image from "next/image";
 import { DrawerDefault } from "./drawer";
 import WhatsAppButton from "./whatsappButton";
 
@@ -47,10 +48,12 @@ export function CardProducts({ product, action }: CardDefaultProps) {
                     onPointerEnterCapture={() => { }}
                     onPointerLeaveCapture={() => { }}
                 >
-                    <img
+                    <Image
                         src={product.image}
                         alt={product.title}
-                        className="h-full w-full object-cover rounded-t-xl"
+                        fill
+                        sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover rounded-t-xl"
                     />
                 </CardHeader>
                 <CardBody
