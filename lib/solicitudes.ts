@@ -1,5 +1,5 @@
 import "server-only";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 export interface Solicitud {
   id: string;
@@ -15,6 +15,7 @@ export interface Equipo {
 }
 
 export async function getSolicitudesForEmail(email: string): Promise<Solicitud[]> {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from("solicitudes")
     .select("id, numero_solicitud, estado, created_at")
@@ -32,6 +33,7 @@ export async function getSolicitudDetailForEmail(
   solicitudId: string,
   email: string
 ): Promise<{ solicitud: Solicitud; equipos: Equipo[] } | null> {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data: solicitud, error: solicitudError } = await supabaseAdmin
     .from("solicitudes")
     .select("id, numero_solicitud, estado, created_at")
@@ -65,6 +67,7 @@ export async function getCertificadoPathForEmail(
   equipoId: string,
   email: string
 ): Promise<string | null> {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data: solicitud, error: solicitudError } = await supabaseAdmin
     .from("solicitudes")
     .select("id")

@@ -1,4 +1,4 @@
-import { resend } from "@/lib/resend";
+import { getResendClient } from "@/lib/resend";
 import { escapeHtml, validateContactForm } from "@/lib/contact-form";
 import { getClientIp, isRateLimited } from "@/lib/rate-limit";
 
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   const { fullName, email, phone, company, taxId, message, product } = validation.data;
 
   try {
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResendClient().emails.send({
       from: "onboarding@resend.dev",
       to: "info@rcj-services.com",
       replyTo: email,

@@ -1,6 +1,6 @@
 import { getCurrentClientEmail } from "@/lib/current-client";
 import { getCertificadoPathForEmail } from "@/lib/solicitudes";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 const SIGNED_URL_TTL_SECONDS = 60;
 
@@ -20,7 +20,7 @@ export async function GET(
     }
 
     const filename = certificadoPath.split("/").pop() ?? "certificado.pdf";
-    const { data, error } = await supabaseAdmin.storage
+    const { data, error } = await getSupabaseAdmin().storage
       .from("certificados")
       .createSignedUrl(certificadoPath, SIGNED_URL_TTL_SECONDS, { download: filename });
 
