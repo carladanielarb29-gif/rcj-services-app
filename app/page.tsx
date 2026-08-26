@@ -65,10 +65,6 @@ export default function Home() {
       <div className="w-full max-w-4xl mx-auto px-4">
         <YouTubeEmbed videoId="muweCIH0WmQ" />
       </div>
-
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <YouTubeEmbed videoId="1T5MtekacO8" />
-      </div>
     </div>
   );
 }

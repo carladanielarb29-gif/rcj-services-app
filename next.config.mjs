@@ -6,6 +6,9 @@ const nextConfig = {
       { protocol: "https", hostname: "procemconsultores.com" },
       { protocol: "https", hostname: "lamenteesmaravillosa.com" },
       { protocol: "https", hostname: "www.tcmetrologia.com" },
+      { protocol: "https", hostname: "img.freepik.com" },
+      { protocol: "https", hostname: "c.pxhere.com" },
+      { protocol: "https", hostname: "ocaglobal.pe" },
     ],
   },
   async headers() {

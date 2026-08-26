@@ -1,7 +1,6 @@
 'use client'
 
 import { CardProducts } from "@/components/cardProducts";
-import YouTubeEmbed from "@/components/youtubeIframe";
 import { clientActions } from "@/data/client-actions";
 import { Typography } from "@material-tailwind/react";
 
@@ -24,25 +23,6 @@ export default function Home() {
         {clientActions.map((item, index) => (
           <CardProducts key={index} product={item} action={item.action} />
         ))}
-      </div>
-
-      {/* Videos */}
-      <Typography
-        id="info"
-        className="text-xl sm:text-xl lg:text-2xl text-center font-bold"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        Información de Metrología
-      </Typography>
-
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <YouTubeEmbed videoId="muweCIH0WmQ" />
-      </div>
-
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <YouTubeEmbed videoId="1T5MtekacO8" />
       </div>
 
     </div>
